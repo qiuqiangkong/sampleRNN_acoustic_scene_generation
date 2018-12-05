@@ -1,13 +1,8 @@
-asdf
 
-<audio controls="controls">
-  <source type="audio/wav" src="generated_samples/123.wav"></source>
-  <source type="audio/ogg" src="generated_samples/123.ogg"></source>
-  <p>Your browser does not support the audio element.</p>
-</audio>
+## Acoustic scene generation with conditional samplernn
 
-<audio src="generated_samples/123.wav" controls preload></audio>
+## Code available soon
 
-<a href="generated_samples/123.wav">elephant</a>
+## Listen to the generated samples here:
+<a href="https://drive.google.com/open?id=1joAGjqaihBzK0RGeagiNjnn5zOalVFeE">generated_samples</a>
 
-ddd
