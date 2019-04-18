@@ -29,10 +29,6 @@ import lib
 
 LEARNING_RATE = 0.001
 
-# You need to modify these paths
-AUDIO_NUMPY_PATH = '/vol/vssp/msos/qk/workspaces/pub_samplernn_icassp2019/datasets/audio_{}.npz'
-RESULTS_DIR = '/vol/vssp/msos/qk/workspaces/pub_samplernn_icassp2019'
-
 ### Parsing passed args/hyperparameters ###
 def get_args():
     def t_or_f(arg):
@@ -69,6 +65,10 @@ def get_args():
     # Hyperparameter arguements:
     parser.add_argument('--exp', help='Experiment name',
             type=str, required=False, default='_')
+    parser.add_argument('--dataset_dir', help='Dataset directory',\
+            type=str, required=True)
+    parser.add_argument('--workspace', help='Workspace directory',\
+            type=str, required=True)
     parser.add_argument('--n_frames', help='How many "frames" to include in each\
             Truncated BPTT pass', type=check_positive, required=True)
     parser.add_argument('--frame_size', help='How many samples per frame',\
@@ -111,6 +111,10 @@ def get_args():
 
 args, tag = get_args()
 
+# Paths
+AUDIO_NUMPY_PATH = os.path.join(args.workspace, 'datasets/audio_{}.npz')
+FOLDER_PREFIX = os.path.join(args.workspace, tag)
+
 N_FRAMES = args.n_frames # How many 'frames' to include in each truncated BPTT pass
 OVERLAP = FRAME_SIZE = args.frame_size # How many samples per frame
 WEIGHT_NORM = args.weight_norm
@@ -142,7 +146,6 @@ PRINT_TIME = 90*60 # Print cost, generate samples, save model checkpoint every N
 STOP_TIME = 60*60*24*3 # Stop after this many seconds of actual training (not including time req'd to generate samples etc.)
 N_SEQS = 300  # Number of samples to generate every time monitoring.
 # TODO:
-FOLDER_PREFIX = os.path.join(RESULTS_DIR, tag)
 SEQ_LEN = N_FRAMES * FRAME_SIZE # Total length (# of samples) of each truncated BPTT sequence
 Q_ZERO = numpy.int32(Q_LEVELS//2) # Discrete value correponding to zero amplitude
 
