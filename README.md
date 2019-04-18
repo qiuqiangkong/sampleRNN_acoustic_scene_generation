@@ -76,7 +76,7 @@ Validation Done!
 If you met running out of GPU memory error, then try to reduce batch_size. 
 
 ## License
-File evaluation_tools/cls_feature_class.py is under TUT_LICENSE. 
+<a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
 
 
 ## External link
