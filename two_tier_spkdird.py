@@ -65,8 +65,6 @@ def get_args():
     # Hyperparameter arguements:
     parser.add_argument('--exp', help='Experiment name',
             type=str, required=False, default='_')
-    parser.add_argument('--dataset_dir', help='Dataset directory',\
-            type=str, required=True)
     parser.add_argument('--workspace', help='Workspace directory',\
             type=str, required=True)
     parser.add_argument('--n_frames', help='How many "frames" to include in each\
