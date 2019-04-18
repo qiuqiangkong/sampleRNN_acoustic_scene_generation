@@ -76,8 +76,7 @@ Validation Done!
 If you met running out of GPU memory error, then try to reduce batch_size. 
 
 ## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
-
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
 
 
