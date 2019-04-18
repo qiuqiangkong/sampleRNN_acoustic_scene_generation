@@ -36,7 +36,7 @@ $ THEANO_FLAGS=mode=FAST_RUN,device=cuda,floatX=float32 python -u two_tier_spkdi
 ## Model
 We apply conditional SampleRNN to generate the audio samples. The architecture looks like:
 
-![alt text](appendixes/samplernn.png width="600")
+<img src="appendixes/samplernn.png" width="500">
 
 Input is on the top and output is at bottom. More details can be found in [1]. 
 
